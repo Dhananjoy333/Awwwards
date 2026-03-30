@@ -30,8 +30,8 @@ function About() {
   return (
     <div id='about' className='min-h-screen w-screen'>
         <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
-            <h2 className='font-general text-sm uppercase md:text-[10px]'>
-                Welcome to Zentry
+            <h2 className='font-general text-sm uppercase md:text-[17px]'>
+                Welcome to Horizon
             </h2>
             <AnimatedTitle 
                 title='Disc<b>o</b>ver the world&apos;s <br/> l<b>a</b>rgest shared adventure,'
@@ -41,7 +41,7 @@ function About() {
             <div className='about-subtext'>
                 <p> The Game of Games begins-your life, now an epic MMORPG</p>
                 <p>
-                    Zentry unites every player from countless games and platform
+                    Horizon unites every player from countless games and platform
                 </p>
             </div>
         </div>

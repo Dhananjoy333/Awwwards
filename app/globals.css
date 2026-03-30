@@ -11,6 +11,9 @@ body{
   background-color: #dfdff0;
   overflow-x: hidden;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 @theme{
   --font-zentry:'zentry',sans-serif;

@@ -25,8 +25,12 @@ function Hero() {
 
   const handleMiniVdClick = () =>{
     setHasClicked(true)
-
     setCurrentIndex(upcomingVideoIndex)
+  }
+
+  const handleVideoEnd = () => {
+    setHasClicked(true) 
+    setCurrentIndex((prev) => (prev % totalVideos) + 1)
   }
 
   useGSAP(()=>{
@@ -74,7 +78,7 @@ function Hero() {
   const getVideoSrc = (index:number) => `videos/hero-${index}.mp4`
 
   return (
-    <div className="relative h-dvh w-screen overflow-x-hidden">
+    <div id="hero" className="relative h-dvh w-screen overflow-x-hidden">
 
       {isLoading && (
         <div className="flex-center absolute z-100 h-dvh w-screen overflow-hidden bg-violet-50">
@@ -111,7 +115,7 @@ function Hero() {
             <video
               src={getVideoSrc(currentIndex === totalVideos -1 ? 1 : currentIndex)}
               autoPlay
-              loop
+              onEnded={handleVideoEnd}
               muted
               className="absolute left-0 top-0 size-full object-cover object-center"
               onLoadedData={handleVideoLoad}
