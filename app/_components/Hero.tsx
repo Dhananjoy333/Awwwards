@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import Button from "./Button"
 import { TiLocationArrow } from "react-icons/ti"
 import { useGSAP } from "@gsap/react"
