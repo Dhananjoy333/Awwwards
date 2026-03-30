@@ -7,9 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 type Props = {
     title: string,
     containerClass: string
+    sectionId?: string
 }
 
-function AnimatedTitle({title, containerClass}:Props) {
+function AnimatedTitle({title, containerClass, sectionId}:Props) {
 
     const containerRef = useRef(null)
 
@@ -35,7 +36,7 @@ function AnimatedTitle({title, containerClass}:Props) {
     },[])
 
   return (
-    <div ref={containerRef} className={`animated-title ${containerClass}`}>
+    <div ref={containerRef} id={sectionId} className={`animated-title ${containerClass}`}>
       {title.split('<br/>').map((line:string, index:number)=>(
         <div key={index} className="flex-center max-w-full flex-wrap gap-2 md:gap-3">
             {line.split(' ').map((word,i)=>(
