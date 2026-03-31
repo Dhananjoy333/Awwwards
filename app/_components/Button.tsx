@@ -1,6 +1,6 @@
 import React from 'react'
 type Props={
-    id : string;
+    id? : string;
     title: string;
     leftIcon?: React.ReactElement;
     rightIcon?: React.ReactElement;

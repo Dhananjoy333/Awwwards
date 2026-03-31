@@ -3,6 +3,8 @@ import About from './_components/About';
 import Navbar from './_components/Navbar';
 import Features from './_components/Features';
 import Story from './_components/Story';
+import Contact from './_components/Contact';
+import Footer from './_components/Footer';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <About/>
       <Features/>
       <Story/>
+      <Contact/>
+      <Footer/>
     </main>
   );
 }
